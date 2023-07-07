@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Courier New";
+  color: rgb(3, 3, 3);
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(10, 10, 10, 0.7),
+      rgba(247, 235, 131, 0.4)
+    ),
+    url(images/chata-pod-kwiatkiem-bg.png);
+  background-position: center;
+
+  background-size: cover;
+  position: relative;
+}
+.logo {
+  width: 20vw;
+  max-width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  padding: 0 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+nav img {
+  width: 150px;
+}
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.nav-links ul li a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+}
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #4b2e02;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: rgb(3, 3, 3);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 58px;
+  color: #fffefe;
+}
+.text-box p {
+  margin: 30px 0 40px;
+  font-size: 18px;
+  color: rgb(253, 252, 252);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+nav .fa-solid {
+  display: none;
+}
+
+@media only screen and (max-width: 1025px) {
+  .logo {
+    width: 35vw;
+    max-width: 170px;
+  }
+
+  .text-box h1 {
+    font-size: 26px;
+    text-shadow: none;
+  }
+  .text-box p {
+    font-size: 16px;
+  }
+  .nav-links ul li {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    background: #e6be50;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  nav .fa-solid {
+    display: block;
+    color: rgb(14, 13, 13);
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+
+  .testimonial-col {
+    margin-left: 50px;
+  }
+
+  .discounts {
+    margin-left: 20px;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  .contact {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact h1 {
+    padding: 0;
+  }
+}
+
+/*----- o nas---*/
+
+.about {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 1em;
+}
+h1 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #441904;
+  text-shadow: 2px 2px #e6be50;
+}
+h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #441904;
+  text-shadow: 2px 2px #e6be50;
+  padding-top: 20px;
+}
+.content {
+  color: black;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 10px;
+}
+
+/*----testimonials---*/
+
+.testimonials {
+  width: 100%;
+  margin: 5px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.testimonial-col {
+  flex-basis: 30%;
+  border-color: #441904;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  text-align: left;
+  background: white;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+.testimonial-col:hover {
+  background-color: #e6be50;
+}
+.testimonial-col p {
+  font-size: 1em;
+  padding: 0;
+}
+.testimonial-col h3 {
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.testimonial-col .fa-solid {
+  color: rgba(117, 47, 6, 0.7);
+}
+
+/*----- galeria ---*/
+.gallery {
+  padding-top: 100px;
+
+  text-align: center;
+  width: 100%;
+}
+.gallery h1 {
+  padding-bottom: 50px;
+}
+
+/*----- oferta ---*/
+
+.offer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.offer-col {
+  flex-basis: 32%;
+
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px;
+}
+.offer-col img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+h3 {
+  text-align: left;
+
+  font-size: 1em;
+  margin: 10px 0;
+}
+.content-list {
+  text-align: left;
+  list-style: none;
+  position: relative;
+  padding-top: 30px;
+}
+
+.price-list {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.discounts {
+  text-align: left;
+  padding-top: 50px;
+  margin-left: 10vw;
+  font-size: 1.3em;
+}
+
+.contact {
+  text-align: center;
+  margin: 50px auto;
+  width: 80%;
+  background-image: linear-gradient(
+      rgb(248, 245, 245),
+      rgba(247, 235, 131, 0.2)
+    ),
+    url(images/chata-pod-kwiatkiem-bg.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.contact-info {
+  font-size: 1.3em;
+
+  color: rgb(5, 5, 5);
+  margin-bottom: 0;
+  padding: 20px;
+}
